@@ -11,10 +11,15 @@ public class StudentServiceImpl{
      @Autowired
      StudentRepo stRepo;
      @Override
-     public Student (insertStudent  Student st){
+     public Student insertStudent (Student st){
         return stRepo.save(st);
     }
     @Override
-    public List Student ()
-
+    public List<Student> getAll (Student){
+        return stRepo.findAll();
+    }
+    @Override
+    public List<Student> getOneStudent (Student st){
+        return 
+    }
 }

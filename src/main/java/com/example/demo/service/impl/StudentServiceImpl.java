@@ -7,4 +7,11 @@ import com.example.demo.entity.Student;
 import com.example.demo.repository.StudentRepo;
 import com.example.demo.service.StudentService;
 
-public class StudentService
+public class StudentServiceImpl{
+     @Autowired
+     StudentRepo
+     @Override
+     public Student (insertStudent st){
+        
+     }
+}

@@ -7,7 +7,8 @@ import com.example.demo.entity.Student;
 import com.example.demo.repository.StudentRepo;
 import com.example.demo.service.StudentService;
 
-public class StudentServiceImpl{
+@service
+public class StudentServiceImpl implements StudentService{
      @Autowired
      StudentRepo stRepo;
      @Override
@@ -19,7 +20,11 @@ public class StudentServiceImpl{
         return stRepo.findAll();
     }
     @Override
-    public List<Student> getOneStudent (Student st){
-        return 
+    public List<Student> getOneStudent (Long id){
+        return stRepo.findById(id);
+    }
+    @Override
+    public void deleteStudent(Long id){
+        st.Repo deleteById(id);
     }
 }
